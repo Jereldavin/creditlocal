@@ -7,10 +7,11 @@ import os
 # 1. Page Global Setup
 st.set_page_config(
     page_title="Credit Score Profiler",
+    page_icon="💳",
     layout="centered"
 )
 
-st.title("Real-Time Credit Score Classifier")
+st.title("💳 Real-Time Credit Score Classifier")
 st.markdown("Provide the core customer financial credentials below to analyze risk tier assignments.")
 st.write("---")
 
@@ -92,20 +93,15 @@ if pipeline is not None:
         
         with st.spinner("Processing features through production pipeline..."):
             prediction = pipeline.predict(features_df)[0]
-            probabilities = pipeline.predict_proba(features_df)[0]
-            classes = pipeline.classes_
+
             
         # 4. Present Output Dynamic Styling
-        st.subheader("Classification Output")
+        st.subheader("Model Classification Output")
         
         if prediction == "Good":
-            st.success(f"### Predicted Class: **{prediction} Credit Tier** ")
+            st.success(f"### Predicted Class: **{prediction} Credit Tier**")
         elif prediction == "Standard":
-            st.info(f"### Predicted Class: **{prediction} Credit Tier** ")
+            st.info(f"### Predicted Class: **{prediction} Credit Tier**")
         else:
-            st.error(f"### Predicted Class: **{prediction} Credit Tier** ")
-            
-        # Output probability spread table
-        st.write("#### Confidence Metrics Vector:")
-        prob_df = pd.DataFrame([probabilities], columns=classes)
-        st.dataframe(prob_df.style.format("{:.2%}"), use_container_width=True)
+            st.error(f"### Predicted Class: **{prediction} Credit Tier**")
+
