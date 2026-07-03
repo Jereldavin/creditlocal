@@ -60,7 +60,7 @@ if pipeline is not None:
     outstanding_debt = st.number_input("Total Outstanding Debt ($)", min_value=0.0, value=1200.0, step=100.0)
     credit_utilization_ratio = st.slider("Credit Utilization Ratio (%)", min_value=0.0, max_value=100.0, value=30.0)
     credit_mix = st.selectbox("Credit Mix Profile", ["Good", "Standard", "Bad"])
-    payment_of_min_amount = st.selectbox("Payment of Minimum Amount Only?", ["Yes", "No", "NM"])
+    payment_of_min_amount = st.selectbox("Payment of Minimum Amount Only?", ["Yes", "No"])
     
     payment_behaviour = st.selectbox("Payment Behaviour Profile", [
         "Low_spent_Small_value_payments", "Low_spent_Medium_value_payments", "Low_spent_Large_value_payments",
