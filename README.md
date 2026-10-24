@@ -1,5 +1,6 @@
 # 💳 Credit Score Classification - Monolithic Streamlit Cloud App & ML Pipeline
 This repository contains an end-to-end Machine Learning pipeline and an interactive web application for classifying customer credit score tiers (**Good**, **Standard**, and **Bad**). The application is deployed live on **Streamlit Community Cloud** using a monolithic architecture.
+
 🌐 **Live Streamlit Demo:** [https://creditlocal-bq7n6692srwyee6d9mkzxg.streamlit.app/](https://creditlocal-bq7n6692srwyee6d9mkzxg.streamlit.app/)
 ---
 ## 📌 Project Overview
